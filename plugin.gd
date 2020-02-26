@@ -3,7 +3,7 @@ extends EditorPlugin
 
 
 const PluginName = 'Console'
-const PluginPath = 'res://addons/quentincaffeino-console/src/Console.tscn'
+const PluginPath = 'res://addons/godot-console/src/Console.tscn'
 
 
 func _enter_tree():
