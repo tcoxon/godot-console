@@ -35,8 +35,8 @@ func _init():
 		'target': Console
 	})
 
-	Console.register('version', {
-		'description': 'Shows engine vesion.',
+	Console.register('engine_version', {
+		'description': 'Shows engine version.',
 		'target': self
 	})
 
@@ -66,7 +66,7 @@ static func help(command = null):
 
 
 # Prints out engine version.
-static func version():  # void
+static func engine_version():  # void
 	Console.writeLine(Engine.get_version_info())
 
 
