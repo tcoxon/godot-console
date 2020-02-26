@@ -11,4 +11,3 @@ func _init():
 # @param  Varian  originalValue
 func normalize(originalValue):  # void
 	self._normalizedValue = int(_rematch.get_string())
-	Console.Log.warn([originalValue, self._normalizedValue])
