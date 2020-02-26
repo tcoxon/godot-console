@@ -37,10 +37,10 @@ var submitAutocomplete = true
 export(String) var action_console_toggle = 'console_toggle'
 
 # @var  string
-export(String) var action_history_up = 'ui_up'
+export(String) var action_history_up = 'console_up'
 
 # @var  string
-export(String) var action_history_down = 'ui_down'
+export(String) var action_history_down = 'console_down'
 
 
 ### Console nodes

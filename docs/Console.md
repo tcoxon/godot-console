@@ -19,8 +19,8 @@
 | readonly *bool* isConsoleShown |  |
 | *bool* submitAutocomplete  | Autocomplete command when `ENTER` is pressed. Default: *true*. |
 | *string* action_console_toggle | Action name used to open the console. Default: *console_toggle*. |
-| *string* action_history_up | Action name used to scroll history up. Default: *ui_up*. |
-| *string* action_history_down | Action name used to scroll history down. Default: *ui_down*. |
+| *string* action_history_up | Action name used to scroll history up. Default: *console_up*. |
+| *string* action_history_down | Action name used to scroll history down. Default: *console_down*. |
 
 
 #### Member Functions

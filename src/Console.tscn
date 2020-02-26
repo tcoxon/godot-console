@@ -132,8 +132,8 @@ transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
 action_console_toggle = "console_toggle"
-action_history_up = "ui_up"
-action_history_down = "ui_down"
+action_history_up = "console_up"
+action_history_down = "console_down"
 
 [node name="ConsoleBox" type="Panel" parent="." index="0"]
 
