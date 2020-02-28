@@ -40,7 +40,7 @@ static func _buildTarget(name, parameters):  # Callback|int
 			target = null
 
 	if not target or !(target is Console.Callback):
-		Console.Console.Log.error(\
+		Console.Log.error(\
 			'QC/Console/Command/Command: build: Failed to create [b]`' + \
 			name + '`[/b] command. Failed to create callback to target')
 		return FAILED
