@@ -33,6 +33,10 @@ var isConsoleShown = true setget _setProtected
 # @var  bool
 var submitAutocomplete = true
 
+# Used to return focus to its original owner when the console is hidden
+# @var Control
+var originalFocusOwner = null
+
 # @var  string
 export(String) var action_console_toggle = 'console_toggle'
 
@@ -129,12 +133,16 @@ func clear():  # void
 func toggleConsole():  # void
 	# Open the console
 	if !isConsoleShown:
+		originalFocusOwner = self.Line.get_focus_owner()
 		self._consoleBox.show()
 		self.Line.clear()
 		self.Line.grab_focus()
 		self._animationPlayer.play_backwards('fade')
 	else:
 		self._animationPlayer.play('fade')
+		if is_instance_valid(originalFocusOwner):
+			originalFocusOwner.grab_focus()
+		originalFocusOwner = null
 
 	isConsoleShown = !isConsoleShown
 
