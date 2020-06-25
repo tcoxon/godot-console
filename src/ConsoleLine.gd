@@ -33,6 +33,9 @@ func _ready():
 
 # @param  Event  e
 func _input(e):
+	if !Console.isConsoleShown:
+		return
+	
 	# Show next line in history
 	if Input.is_action_just_pressed(Console.action_history_up):
 		self._currCmd = Console.History.current()
