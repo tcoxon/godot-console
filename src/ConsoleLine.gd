@@ -93,6 +93,10 @@ func execute(input):
 			var result = command.execute(parsedCommand.arguments)
 			Console.History.push(input)
 			self.clear()
+			if result is GDScriptFunctionState:
+				set_process_input(false)
+				result = yield(result, "completed")
+				set_process_input(true)
 			if result != null:
 				Console.writeLine(result)
 
